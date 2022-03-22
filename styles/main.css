@@ -84,7 +84,7 @@ button:hover {
    content: '';
    width: var(--icon-size);
    height: var(--icon-size);
-   background-image: url(/assets/images/ic_x.svg);
+   background-image: url(../assets/images/ic_x.svg);
    background-repeat: no-repeat;
 }
 
@@ -93,16 +93,16 @@ button:hover {
    content: '';
    width: var(--icon-size);
    height: var(--icon-size);
-   background-image: url(/assets/images/ic_o.svg);
+   background-image: url(../assets/images/ic_o.svg);
    background-repeat: no-repeat;
 }
 
 .board.x .cell:not(.x):not(.o):hover::after {
-   background-image: url(/assets/images/ic_x_hover.svg);
+   background-image: url(../assets/images/ic_x_hover.svg);
 }
 
 .board.o .cell:not(.x):not(.o):hover::after {
-   background-image: url(/assets/images/ic_o_hover.svg);
+   background-image: url(../assets/images/ic_o_hover.svg);
 }
 
 .winning-message {
