@@ -1,9 +1,24 @@
-@import url('_global.css');
-@import url('_buttons.css');
-
 :root {
    --cell-size: 100px;
    --icon-size: 80px;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Nunito', sans-serif;
+}
+
+*, *::after, *::before {
+   box-sizing: border-box;
+}
+
+html, body {
+   height: 100%;
+}
+
+body {
+   background-color: #591CCC;
 }
 
 header {
@@ -14,6 +29,25 @@ header img {
    padding: 24px;
    width: 144px;
    height: auto;
+}
+
+button {
+   background-color: #ff00cc;
+   border: none;
+   box-sizing: border-box;
+   border-radius: 4px;
+   padding: 16px;
+   color: #ffffff;
+   margin: 8px;
+   width: 250px;
+   cursor: pointer;
+   font-size: 24px;
+   font-weight: 900;
+   letter-spacing: 1px;
+}
+
+button:hover {
+   background-color: #ee02bf;
 }
 
 .board {
