@@ -1,0 +1,86 @@
+@import url('_global.css');
+@import url('_buttons.css');
+
+:root {
+   --cell-size: 100px;
+   --icon-size: 80px;
+}
+
+.board {
+   width: 100vw;
+   height: 100vh;
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   align-content: center;
+   align-items: center;
+   grid-template-columns: repeat(3, auto);
+   grid-gap: 4px;
+}
+
+.cell {
+   width: var(--cell-size);
+   height: var(--cell-size);
+   background-color: #4A18A4;
+   border: 1px solid rgba(255, 255, 255, 0.16);
+   border-radius: 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.cell.x,
+.cell.o {
+   cursor: not-allowed;
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.o):hover::after {
+   content: '';
+   width: var(--icon-size);
+   height: var(--icon-size);
+   background-image: url(/assets/images/ic_x.svg);
+   background-repeat: no-repeat;
+}
+
+.board.o .cell:not(.x):not(.o):hover::after,
+.cell.o::after {
+   content: '';
+   width: var(--icon-size);
+   height: var(--icon-size);
+   background-image: url(/assets/images/ic_o.svg);
+   background-repeat: no-repeat;
+}
+
+.board.x .cell:not(.x):not(.o):hover::after {
+   background-image: url(/assets/images/ic_x_hover.svg);
+}
+
+.board.o .cell:not(.x):not(.o):hover::after {
+   background-image: url(/assets/images/ic_o_hover.svg);
+}
+
+.winning-message {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(39, 23, 93, 0.9);
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.winning-message.show {
+   display: flex;
+}
+
+.winning-message .winning-message-text {
+   color: white;
+   font-size: 32px;
+   font-weight: 500;
+   margin-bottom: 8px;
+}
