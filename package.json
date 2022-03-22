@@ -1,0 +1,16 @@
+{
+  "name": "tic-tac-toe-js",
+  "version": "1.0.0",
+  "description": "The famous tic tac toe game made in JavaScript",
+  "main": "index.js",
+  "repository": "https://github.com/gizellysteffanny/tic-tac-toe-js.git",
+  "author": "Gizelly Steffanny <gizellysteffanny@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "deploy": "gh-pages -d /"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
